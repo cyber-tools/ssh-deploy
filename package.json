@@ -29,5 +29,9 @@
   },
   "bin": {
     "ssh-deploy": "./index.js"
+  },
+  "repository": {
+    "type": "hztianque.com",
+    "url": "http://yushicheng@gitlab.hztianque.com/yushicheng/ssh-deploy.git"
   }
 }
