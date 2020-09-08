@@ -9,6 +9,9 @@ module.exports = {
     username: "",
     password: ""
   },
+  beforeDeploy: async (client) => {
+
+  },
   afterDeploy: async (client) => {
 
   }

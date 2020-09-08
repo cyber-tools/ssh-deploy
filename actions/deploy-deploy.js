@@ -5,8 +5,11 @@ const deployDirectory = require("@/scripts/deploy-directory");
 module.exports = async function (option) {
   try {
     const { config } = option;
-    const { local, remote, client, afterDeploy } = await getConfigInfo(config);
+    const { local, remote, client, beforeDeploy, afterDeploy } = await getConfigInfo(config);
     const ssh_client = await createClient(client);
+    if (beforeDeploy) {
+      await beforeDeploy(ssh_client);
+    };
     await deployDirectory(ssh_client, local, remote);
     if (afterDeploy) {
       await afterDeploy(ssh_client);

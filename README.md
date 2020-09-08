@@ -40,8 +40,13 @@ module.exports={
     username: "XXXXX",
     password: "XXXXX"
   },
-  afterDeploy:async (client)=>{
-  	// 在文件夹部署成功后运行的方法，client是一个ssh的运行实例
+  beforeDeploy: async (client) => {
+    // 部署之前运行的方法client是一个ssh的运行实例
+    // console.log("beforeDeploy=>");
+  },
+  afterDeploy: async (client) => {
+    // 部署之后运行的方法client是一个ssh的运行实例
+    // console.log(afterDeploy);
   }
 };
 ```

@@ -9,8 +9,12 @@ module.exports = {
     username: "",
     password: ""
   },
+  beforeDeploy: async (client) => {
+    // 部署之前运行的方法
+    // console.log("beforeDeploy=>");
+  },
   afterDeploy: async (client) => {
-    const display = (await client.execCommand("ls")).stdout;
-    console.log(display);
+    // 部署之后运行的方法
+    // console.log(afterDeploy);
   }
 };
