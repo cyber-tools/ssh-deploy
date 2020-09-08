@@ -1,6 +1,6 @@
 {
   "name": "@tianque/ssh-deploy",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "用于创建cyber系列工具的命令行工具",
   "main": "index.js",
   "scripts": {
