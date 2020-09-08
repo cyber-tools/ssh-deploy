@@ -1,6 +1,6 @@
 {
   "name": "@tianque/ssh-deploy",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "基于deploy.config.js部署到ssh终端",
   "main": "index.js",
   "scripts": {
