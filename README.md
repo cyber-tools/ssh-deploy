@@ -12,18 +12,33 @@ npm install @tianque/ssh-deploy  -g
 
 <h2 align="center">Usage</h2>
 
-部署到测试环境的方式:
+生成deploy.config.js文件模板:
 ```bash
-ssh-deploy test
+ssh-deploy config
 ```
 
-部署到跳板机的方式:
+部署命令:
 ```bash
-ssh-deploy proxy
+ssh-deploy deploy
 ```
 
 
-以下是在跳板机上运行的命令:
+
+<h2 align="center">deploy.config.js</h2>
+
+一下是公司测试环境的样例
+
 ```bash
-ssh-deploy prod
+const path=require("path");
+
+module.exports={
+  local: path.resolve(__dirname, "./dingNew/"),
+  remote: "/home/admin/jsProject/dingNew",
+  client: {
+ 	 	port: 11,
+    host: "192.168.1.XXX",
+    username: "XXXXX",
+    password: "XXXXX"
+  }
+};
 ```

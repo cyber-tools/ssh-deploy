@@ -1,6 +1,6 @@
 const toast = require("@/utils/toast");
 
-module.exports = async function (local, remote, client) {
+module.exports = async function (client, local, remote) {
   try {
     toast.start(["将", local, "部署到", remote].join(""));
     const status = await client.putDirectory(local, remote, {
