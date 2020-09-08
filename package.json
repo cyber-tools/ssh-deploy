@@ -25,6 +25,7 @@
     "module-alias": "^2.2.2",
     "node-ssh": "^11.0.0",
     "ora": "^4.0.5",
+    "path-exists": "^4.0.0",
     "ssh2": "^0.8.9"
   },
   "bin": {

@@ -1,9 +1,7 @@
 const toast = require("@/utils/toast");
-const getDeployConfig = require("@/utils/getDeployConfig");
 
-module.exports = async function (client) {
+module.exports = async function (local, remote, client) {
   try {
-    const { local, remote } = getDeployConfig();
     toast.start(["将", local, "部署到", remote].join(""));
     const status = await client.putDirectory(local, remote, {
       recursive: true,

@@ -8,20 +8,14 @@ program
   .version(json.version);
 
 program
-  .command("test")
+  .command("deploy")
+  .option("-c,--config <config>")
   .description("部署至测试环境")
-  .action(require("@/actions/deploy-test"));
+  .action(require("@/actions/deploy-deploy"));
 
 program
-  .command("proxy")
-  .description("部署至跳板机")
-  .action(require("@/actions/deploy-proxy"));
-
-program
-  .command("prod")
-  .description("部署至生产环境")
-  .action(require("@/actions/deploy-prod"));
+  .command("config")
+  .description("写入登录信息")
+  .action(require("@/actions/deploy-config"));
 
 program.parse(process.argv);
-
-
