@@ -1,5 +1,4 @@
 const path = require("path");
-const defaultConfig = require("@/configs/deploy.config");
 
 module.exports = async function getAccountInfo(configFilePath) {
   if (configFilePath) {
