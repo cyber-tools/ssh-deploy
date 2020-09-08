@@ -1,7 +1,7 @@
 {
   "name": "@tianque/ssh-deploy",
   "version": "2.0.1",
-  "description": "用于创建cyber系列工具的命令行工具",
+  "description": "基于deploy.config.js部署到ssh终端",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,7 +32,7 @@
     "ssh-deploy": "./index.js"
   },
   "repository": {
-    "type": "hztianque.com",
-    "url": "http://yushicheng@gitlab.hztianque.com/yushicheng/ssh-deploy.git"
+    "type": "github.com",
+    "url": "https://github.com/cyber-tools/ssh-deploy.git"
   }
 }
