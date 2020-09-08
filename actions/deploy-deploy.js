@@ -1,5 +1,6 @@
 const createClient = require("@/utils/createClient");
 const getConfigInfo = require("@/utils/getConfigInfo");
+const removeDirectory = require("@/scripts/remove-directory");
 const deployDirectory = require("@/scripts/deploy-directory");
 
 module.exports = async function (option) {
@@ -7,6 +8,7 @@ module.exports = async function (option) {
     const { config } = option;
     const { local, remote, client, beforeDeploy, afterDeploy } = await getConfigInfo(config);
     const ssh_client = await createClient(client);
+    await removeDirectory(client, remote);
     if (beforeDeploy) {
       await beforeDeploy(ssh_client);
     };
