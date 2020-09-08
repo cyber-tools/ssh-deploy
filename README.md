@@ -39,6 +39,11 @@ module.exports={
     host: "192.168.1.XXX",
     username: "XXXXX",
     password: "XXXXX"
+  },
+  afterDeploy:async (client)=>{
+  	// 在文件夹部署成功后运行的方法，client是一个ssh的运行实例
   }
 };
 ```
+
+ssh运行实例请参考[node-ssh](https://www.npmjs.com/package/node-ssh)文档

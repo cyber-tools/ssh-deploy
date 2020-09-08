@@ -8,5 +8,8 @@ module.exports = {
     port: 22,
     username: "",
     password: ""
+  },
+  afterDeploy: async (client) => {
+
   }
 };

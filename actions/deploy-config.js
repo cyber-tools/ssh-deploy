@@ -7,7 +7,7 @@ const { LOCAL_CONFIG, PROJECT_CONFIG } = require("@/configs/runtime.config");
 
 module.exports = async function () {
   if (await hasConfigFile()) {
-    toast.warn("deploy.config.js文件已经存在!");
+    toast.warn("deploy.config.js文件已经存在!您也可以使用手动创建配置文件,并搭配--config选项");
   } else {
     try {
       toast.start("正在初始化项目部署配置... ...");
